@@ -1,11 +1,9 @@
-from sanic import Sanic
-from sanic.response import json
+from sanic_app import create_app
 
-app = Sanic()
-
-@app.route('/')
-async def test(request):
-    return json({'hello': 'world'})
+app = create_app()
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=7001)
+    print('Sanic Heg Hog -- Local Debug Mode')
+    app.run(host='0.0.0.0', port=7001, debug=True)
+
+
