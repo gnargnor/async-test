@@ -5,7 +5,7 @@ development using Node and Express, I miss being able to take advantage of an ev
 
 # Prerequisites
 * Python 3.6
-* NASA API key - (api.nasa.gov)[https://api.nasa.gov/]
+* NASA API key - [api.nasa.gov](https://api.nasa.gov/)
 
 ## Getting started
 
