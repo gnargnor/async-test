@@ -5,8 +5,7 @@ development using Node and Express, I miss being able to take advantage of an ev
 
 # Prerequisites
 * Python 3.6
-
-
+* NASA API key - (api.nasa.gov)[https://api.nasa.gov/]
 
 ## Getting started
 
@@ -14,4 +13,5 @@ development using Node and Express, I miss being able to take advantage of an ev
 * Create a virtual environment:  `> python3 -m venv venv`
 * Activate the virtual environment:  `> source venv/bin/activate`
 * Install dependencies:  `> pip install -r requirements.txt`
+* Create a .env file in the root and set `NASA_API_KEY=<your NASA API key>`
 * Start the server:  `> python3 server.py`
