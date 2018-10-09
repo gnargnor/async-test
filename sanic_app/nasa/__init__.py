@@ -23,9 +23,9 @@ def lookup_all_epic_dates(urls):
     print(range(math.floor(len(urls) / 10)))
     pbar = tqdm(total=total)
     responses = []
-    for i in range(math.floor(len(urls) / 10)):
-        print(i * math.floor(len(urls) / 10) + math.floor(len(urls) / 10))
-        mini_list = urls[i:(i * math.floor(len(urls) / 10) + math.floor(len(urls) / 10))]
+    for i in range(11):
+        print(i * math.floor(len(urls) / 10) + (len(urls) - i * math.floor(len(urls) / 10)) if i != 10 else i * math.floor(len(urls) / 10) + (len(urls) - i * math.floor(len(urls) / 10)))
+        mini_list = urls[i:(i * math.floor(len(urls) / 10) + (len(urls) - i * math.floor(len(urls) / 10)) if i != 10 else i * math.floor(len(urls) / 10) + (len(urls) - i * math.floor(len(urls) / 10)))]
         rs = (grequests.get(u) for u in mini_list)
         responses.append(grequests.map(rs))
         pbar.update(math.floor(len(urls) / 10))
